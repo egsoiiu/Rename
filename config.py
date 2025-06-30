@@ -24,19 +24,19 @@ import re, os, time
 id_pattern = re.compile(r'^.\d+$') 
 
 class Config(object):
-    API_ID    = os.environ.get("API_ID", "23246613")
-    API_HASH  = os.environ.get("API_HASH", "b94000048d3e07bd33f1830edb2ef4f0")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7819376269:AAEkg83pCG6GQ-xLqMwOuWdTLIDAOi43d5w") 
+    API_ID    = os.environ.get("API_ID", "")
+    API_HASH  = os.environ.get("API_HASH", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
    
     # database config
-    DB_NAME = os.environ.get("DB_NAME","cluster0")     
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://kkbhanuchand:OlcLklz1QBzAEv5e@cluster0.u9oiqru.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+    DB_NAME = os.environ.get("DB_NAME", "")     
+    DB_URL  = os.environ.get("DB_URL", "")
  
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '8140276564').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "KBCREBOT") 
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL"))
     MAX_CONCURRENT_TRANSMISSIONS = int(os.environ.get("MAX_CONCURRENT_TRANSMISSIONS", "10")) # Set the maximum amount of concurrent transmissions (uploads & downloads).
     

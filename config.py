@@ -3,10 +3,10 @@ import os
 
 
 # Required Variables Config
-API_ID = int(os.environ.get("API_ID", ""))
-API_HASH = os.environ.get("API_HASH", "")
-BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-ADMIN = int(os.environ.get("ADMIN", ""))
+API_ID = int(os.environ.get("API_ID", "25943549"))
+API_HASH = os.environ.get("API_HASH", "bd7960c74ffdff6f8e84328aa7f2d7da")
+BOT_TOKEN = os.environ.get("BOT_TOKEN", "8174304470:AAF49E9HNuPk7nMZnxU0EwPkDDNQSXvQEmc")
+ADMIN = int(os.environ.get("ADMIN", "6300548815"))
 
 
 # Premium 4GB Renaming Client Config
@@ -14,17 +14,17 @@ STRING_SESSION = os.environ.get("STRING_SESSION", "")
 
 
 # Log & Force Channel Config
-FORCE_SUBS = os.environ.get("FORCE_SUBS", "")
-LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+FORCE_SUBS = os.environ.get("FORCE_SUBS", "https://t.me/+10ym8n0JSBg5MTM9")
+LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "https://t.me/+10ym8n0JSBg5MTM9"))
 
 
 # Mongo DB Database Config
-DATABASE_URL = os.environ.get("DATABASE_URL", "")
-DATABASE_NAME = os.environ.get("DATABASE_NAME", "madflixbotz")
+DATABASE_URL = os.environ.get("DATABASE_URL", "mongodb+srv://vk63692543:varun@varunkumaran.sbzhefr.mongodb.net/?retryWrites=true&w=majority&appName=Varunkumaran")
+DATABASE_NAME = os.environ.get("DATABASE_NAME",vk63692543 "madflixbotz")
 
 
 # Other Variables Config
-START_PIC = os.environ.get("START_PIC", "https://graph.org/file/ad48ac09b1e6f30d2dae4.jpg")
+START_PIC = os.environ.get("START_PIC", "https://envs.sh/PXk.jpg")
 
 
 
@@ -47,6 +47,6 @@ START_PIC = os.environ.get("START_PIC", "https://graph.org/file/ad48ac09b1e6f30d
 
 # Jishu Developer 
 # Don't Remove Credit 🥺
-# Telegram Channel @Madflix_Bots
-# Backup Channel @JishuBotz
-# Developer @JishuDeveloper
+# Telegram Channel https://t.me/+10ym8n0JSBg5MTM9
+# Backup Channel  https://t.me/+10ym8n0JSBg5MTM9
+# Developer 6300548815

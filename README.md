@@ -1,120 +1,84 @@
-<img src="https://graph.org/file/ad48ac09b1e6f30d2dae4.jpg" alt="logo" target="/blank">
+# Nrrenamerbot - chat bot
+It is repository for chat bot: [@Nrrenamerbot](https://t.me/Nrrenamerbot)
 
-<h1 align="center">
- <b><a href="https://t.me/filerenamexprobot" target="/blank">Rename Bot 4GB</a></>
-</h1>
+## What it is?
+This repository can be imported to [Bots.Business](https://bots.business) as a worked chat bot.
 
-<p align="center">🩷 Thanks for Being Here 🩷</p>
+[Bots.Business](https://bots.business) - it is probably the first CBPaaS - Chat Bot Platform as a Service.
 
+A CBPaaS is a cloud-based platform that enables developers to create chatbots without needing to build backend infrastructure.
 
+## Create your own bot for Telegram from this Git repo
 
+How to create bot?
+1. Create bot with [@BotFather](https://telegram.me/BotFather) and take Secret Token
+2. Create bot in App and add Secret Token
+3. Add Public Key from App as [Deploy key](https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys) with read access (and write access for bot exporting if you need it)
+4. Do import for this git repo
 
+Now you can talk with yours new Telegram Bot
 
-### 🔥 ALL VARIABLES
+See [more](https://help.bots.business/getting-started)
 
-<b><details><summary>Tap On Me For Environment Variable</summary>
+## Commands - in commands folder
+File name - it is command name (Bot it can be rewritten in command description)
 
-* `API_ID` - Get API ID From <a href="https://my.telegram.org" target="/blank">Telegram Auth</a> 
-* `API_HASH` - Get API HASH From <a href="https://my.telegram.org" target="/blank">Telegram Auth</a>
-* `BOT_TOKEN` - Get BOT TOKEN From <a href="https://t.me/BotFather" target="/blank">Bot Father</a>
-* `ADMIN` - Add Your User ID, If Multiple Is Use Space To Split
-* `LOG_CHANNEL` - Bot Logs Channel To Sending User Data & 4GB Premium Client To Use, Id Must Startswith -100 & Make Sure Bot Is Admin In This Channel
-* `DATABASE_URL` - Mongo Database URL From <a href="https://cloud.mongodb.com" target="/blank">Mongo DB</a>
-* `DATABASE_NAME`  - Your Mongo Database Name From Mongo DB (Optional)
-* `FORCE_SUBS` - Your Force Subscribe Channel Username Without @ (Optional)
-* `START_PIC` - Your Bot Start Command Pic (Optional)
-* `STRING_SESSION` - Premium 4GB Client Pyrogram v2 String Session, You Can Get It From <a href="https://t.me/StringGenXRobot" target="/blank">String Gen Bot</a> (Optional)
-</b>
-</details>
+Command can have: `name`, `help`, `aliases` (second names), `answer`, `keyboard`, `scnarios` (for simple logic) and other options.
 
+### Command description
+It is file header:
 
+    /*CMD
+      command: /test
+      help: this is help for ccommand
+      need_reply: [ true or false here ]
+      auto_retry_time: [ time in sec ]
+      answer: it is example answer for /test command
+      keyboard: button1, button2
+      aliases: /test2, /test3
+    CMD*/
 
-### 📶 DEPLOYEMENT
+See [more](https://help.bots.business/commands)
 
-<b><details><summary>Tap On Me For Deply To Heroku</summary>
+### Command body
+It is command code in JavaScript.
+Use Bot Java Script for logic in command.
 
- - Deploy To Heroku
-<p>
-<a href="https://heroku.com/deploy?template=https://github.com/JishuDeveloper/Rename-Bot-4GB"> <img src="https://www.herokucdn.com/deploy/button.svg" alt="Deploy"> </a>
-</p>
-</b>
-</details>
+For example:
+> Bot.sendMessage(2+2);
 
-
-
-### 🥰 FEATURES
-
-<b><details><summary>Tap On Me For Bot Features</summary>
-
- - Renames Very Fast.
- - Support 4GB Rename With Upgrade Plan.
- - Permanent Thumbnail Support.
- - Supports Broadcasts.
- - Set Custom Caption.
- - Has A Custom Start-Up Pic.
- - Force Subscribe Available.
- - Supports Unlimited Renaming At A Time.
- - Deploy To Koyeb + Heroku + Railway.
- - Developer Service 24x7. 🔥
-</b>
-</details>
+See [more](https://help.bots.business/scenarios-and-bjs)
 
 
+## Libraries - in libs folder
+You can store common code in the libs folder. File name - it is library name.
 
-### 😍 USER COMMANDS
+For example code in myLib.js:
 
-<b><details><summary>Tap On Me For User Commands</summary>
+    function hello(){ Bot.sendMessage("Hello from lib!") }
+    function goodbye(name){ Bot.sendMessage("Goodbye, " + name) }
 
-```
-start - Check If The Bot Is Running.
-viewthumb - To View Current Thumbnail.
-delthumb - To Delete Current Thumbnail.
-set_caption - To Set A Custom Caption.
-see_caption - To See Your Custom Caption.
-del_caption - To Delete Custom Caption.
-ping - To Check Bot Ping.
-myplan - To View User Current Plan.
-donate - To Support Developer.
-upgrade - To View All Plans With Price List.
-```
-</b>
-</details>
+    publish({
+      sayHello: hello,
+      sayGoodbyeTo: goodbye
+    })
 
+then you can run in any bot's command:
 
+    Libs.myLib.hello()
+    Libs.myLib.sayGoodbyeTo("Alice")
 
-### 🔐 ADMIN COMMANDS
+See [more](https://help.bots.business/git/library)
 
-<b><details><summary>Tap On Me For Admin Commands</summary>
-
-```
-users - Use This Command To See Total Users [Admins Only].
-allids - Use This Command To See All Users IDs List [Admins Only].
-broadcast - Message Broadcast Command [Admins Only].
-warn - Use This Command To Send A Message To A User [Admins Only].
-ceasepower - To Cease (Downgrade) Renaming Capacity [Admins Only].
-resetpower - To Reset Renaming Capacity (To Default 2GB) [Admins Only].
-addpremium - To Upgrade User Plan [Admins Only].
-restart - Use This Command To Cancel All Process And Restart The Bot [Admins Only].
-```
-</b>
-</details>
+## Other bots example
+See other bots examples in the [github](https://github.com/bots-business?utf8=✓&tab=repositories&q=&type=public&language=javascript) or in the [Bot Store](https://bots.business/)
 
 
+## Other help
+[Help.bots.business](https://help.bots.business)
 
-### ❤️ RESPECTING
-- [JishuDeveloper](https://github.com/JishuDeveloper)
-- [Madflix Official](https://github.com/jishusinha) 
-- [lntechnical](https://github.com/lntechnical2)
+## API
+See [API](https://api.bots.business/docs#/docs/summary)
 
-### 😍 BOTS CHANNEL
-- [Madflix Botz](https://t.me/Madflix_Bots)
-- [Jishu Botz](https://t.me/JishuBotz)
 
-### 💕 CONTACT DEVELOPER
-- [Jishu Developer](https://t.me/JishuDeveloper)
-- [Madflix Official](https://t.me/MadflixOfficials)
-
-### ☕ BUY ME A COFFEE
-- [PayPal](https://paypal.me/jishudeveloper/2.50USD)
-- [PhonePe](https://graph.org/file/6822df5af3a2e80637172.jpg)
-- [UPI](https://graph.org/file/b831109be4acff5c966d2.jpg)
+![](https://bots.business/images/web-logo.png)

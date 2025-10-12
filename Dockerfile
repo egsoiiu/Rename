@@ -1,31 +1,31 @@
-# ✅ Use a stable version of Python
+# Use a compatible and stable Python version
 FROM python:3.11-slim
 
-# Set the working directory
+# Set working directory
 WORKDIR /app
 
-# ✅ Install system dependencies for building Python packages
+# Install required build tools and headers
 RUN apt update && apt install -y \
-    build-essential \
     gcc \
     libffi-dev \
     libssl-dev \
-    python3-dev \
+    build-essential \
+    python3.11-dev \
     git \
     ffmpeg \
     && apt clean
 
-# Copy only requirements first (for better caching)
+# Copy requirements first to cache dependencies
 COPY requirements.txt .
 
-# ✅ Avoid pip root warnings
+# Avoid root pip warning
 ENV PIP_ROOT_USER_ACTION=ignore
 
-# ✅ Install Python dependencies
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the full project
 COPY . .
 
-# Default command
+# Run your bot
 CMD ["python", "bot.py"]
